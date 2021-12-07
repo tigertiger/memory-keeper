@@ -3,9 +3,14 @@ import PropTypes from "prop-types";
 
 function Memory(props){
   const memoryStyles = {
-    className: 'card',
-    width:'500px'
+    className: 'basicCard',
+    width:'500px',
+    boxShadow: '-4px -3px 45px 0px rgba(28 163 125 / 35%)',
+    padding:'1%',
+    margin:'2%',
+    borderRadius: '3%'
   }
+
   return (
     <React.Fragment>
       <div style={memoryStyles} onClick = {() => props.whenMemoryClicked(props.id)}>

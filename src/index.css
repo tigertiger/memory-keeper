@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Estonia&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=Orbitron:wght@400;500&display=swap');
+
+body {
+  margin: 0;
+  font-family: Consolas, 'Courier New';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.container {
+  display:block;
+  padding:2% 0 2% 3%;
+}
+
+/* button {
+  font-family: Consolas, 'Courier New';
+  padding:5px;
+  font-size:12pt;
+  text-transform: uppercase;
+  letter-spacing:.3rem;
+  padding:5px 15px;
+  margin:2% 2%;
+}
+
+button:hover {
+  font-weight: bold;
+
+} */
+
+
+
+button{
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 40px 0;
+    color: #000;
+    background: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+
+}
+button:hover{
+    font-weight:bold;
+    background: #109b84;
+    color: #050801;
+    box-shadow: 0 0 5px #109b84,
+                0 0 25px #109b84,
+                0 0 50px #109b84,
+                0 0 200px #109b84;
+  -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+button:nth-child(1){
+    filter: hue-rotate(80deg);
+}
+button:nth-child(2){
+    filter: hue-rotate(110deg);
+}

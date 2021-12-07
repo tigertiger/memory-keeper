@@ -6,8 +6,10 @@ import MemoryControl from './MemoryControl';
 function App() {
   return (
     <>
-      <Header />
-      <MemoryControl />
+      <div className="container">
+        <Header />
+        <MemoryControl />
+      </div>
     </>
   );
 }
