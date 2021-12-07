@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from "prop-types";
 import { useFirestore } from 'react-redux-firebase';
 
-const ExpandMemory = (props) => {
+function ExpandMemory(props){
   const firestore = useFirestore();
 
   function addMemoryToFirestore(event) {
     event.preventDefault();
-    props.onExpandMemory();
+    props.onExpandMemoryClick();
     return firestore.collection('memory').add({
       title: event.target.title.value,
       description: event.target.description.value,
@@ -22,7 +22,7 @@ const ExpandMemory = (props) => {
           type='text'
           name='title'
           placeholder='Memory Title' /><br />
-        <textarea /><br />
+        <textarea name='description' placeholder='Tell us your memory' /><br />
         <input
           type='file'
           name='image'
@@ -34,7 +34,7 @@ const ExpandMemory = (props) => {
 }
 
 ExpandMemory.propTypes = {
-  onExpandMemory: PropTypes.func
+  onExpandMemoryClick: PropTypes.func
 };
 
 export default ExpandMemory;

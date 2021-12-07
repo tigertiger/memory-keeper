@@ -53,7 +53,7 @@ class MemoryControl extends React.Component {
     let currentlyVisible = null;
     
     if (this.props.formVisibleOnPage) {
-      currentlyVisible = <ExpandMemory />;
+      currentlyVisible = <ExpandMemory onExpandMemoryClick={this.handleExpandMemory} />;
     } else {
       currentlyVisible = <Remember />;
     }
