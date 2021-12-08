@@ -1,22 +1,16 @@
 import React from 'react';
-import PropTypes from "prop-types";
+import {  Link } from "react-router-dom";
 
 function NavBar(props){
-  const {onRememberClick, onExpandMemoryClick} = props;
   return (
     <div>
 
-      <button onClick={onRememberClick}>Remember</button>
-      <button onClick={onExpandMemoryClick}>Expand our Mind</button>
-      <button>Log In</button>
+      <Link to='/'>Remember</Link>
+      <Link to='/expandmemory'>Expand our Mind</Link>
+      <Link to='/signin'>Log In</Link>
 
     </div>
   );
 }
-
-NavBar.propTypes = {
-  onRememberClick: PropTypes.func,
-  onExpandMemoryClick: PropTypes.func
-};
 
 export default NavBar;

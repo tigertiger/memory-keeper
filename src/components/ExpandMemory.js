@@ -16,20 +16,22 @@ function ExpandMemory(props){
   }
 
   return (
-    <div>
-      <form onSubmit={addMemoryToFirestore}>
-        <input
-          type='text'
-          name='title'
-          placeholder='Memory Title' /><br />
-        <textarea name='description' placeholder='Tell us your memory' /><br />
-        <input
-          type='file'
-          name='image'
-          /><br />
-          <button type='submit'>Expand</button>
-      </form>
-    </div>
+    <React.Fragment>
+      <div>
+        <form onSubmit={addMemoryToFirestore}>
+          <input
+            type='text'
+            name='title'
+            placeholder='Memory Title' /><br />
+          <textarea name='description' placeholder='Tell us your memory' /><br />
+          <input
+            type='file'
+            name='image'
+            /><br />
+            <button type='submit'>Expand</button>
+        </form>
+      </div>
+    </React.Fragment>
   );
 }
 
