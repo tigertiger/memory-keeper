@@ -7,7 +7,9 @@ function NavBar(props){
 
       <Link to='/'>Remember</Link>
       <Link to='/expandmemory'>Expand our Mind</Link>
+      <Link to='/signout'>Log Out</Link>
       <Link to='/signin'>Log In</Link>
+      <Link to='/signup'>Sign Up</Link>
 
     </div>
   );

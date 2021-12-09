@@ -1,22 +1,15 @@
 import React from "react";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword} from 'firebase/auth';
+import {useHistory} from "react-router-dom";
+
 
 function Signin(){  
 
-  function doSignUp(event) {
-    event.preventDefault();
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    const auth = getAuth();
-    createUserWithEmailAndPassword(auth, email, password).then(function(){
-      alert("successfully signed up!");
-    }).catch(function(error) {
-      alert(error.message);
-    });
-  }
+  let history = useHistory();
 
   function doSignIn(event) {
     event.preventDefault();
+    history.push("/");
     const email = event.target.signinEmail.value;
     const password = event.target.signinPassword.value;
     const auth = getAuth();
@@ -27,30 +20,8 @@ function Signin(){
     });
   }
 
-  function doSignOut() {
-    const auth = getAuth();
-    signOut(auth).then(function() {
-      alert("Successfully signed out!");
-    }).catch(function(error) {
-      alert(error.message);
-    });
-  }
-
   return (
     <React.Fragment>
-      <h1>Sign up</h1>
-      <form onSubmit={doSignUp}>
-        <input
-          type='text'
-          name='email'
-          placeholder='email' />
-        <input
-          type='password'
-          name='password'
-          placeholder='Password' />
-        <button type='submit'>Sign up</button>
-      </form>
-
       <h1>Sign In</h1>
       <form onSubmit={doSignIn}>
         <input
@@ -63,8 +34,6 @@ function Signin(){
           placeholder='Password' />
         <button type='submit'>Sign in</button>
       </form>
-      <h1>Sign Out</h1>
-      <button onClick={doSignOut}>Sign out</button>
     </React.Fragment>
   );
 }
